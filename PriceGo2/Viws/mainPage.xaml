@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv ="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             xmlns:toolkit ="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="PriceGo2.Viws.mainPage"
+             BackgroundColor="Black">
+    
+    <VerticalStackLayout>
+        <Image 
+            x:Name="Test_IMG"
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"></Image>
+        <Grid RowDefinitions="*">
+            <toolkit:CameraView x:Name="Camera" 
+                      MediaCaptured="Camera_MediaCaptured"
+                      VerticalOptions="Fill"
+                      HorizontalOptions="Fill"
+                      WidthRequest="393"
+                      HeightRequest="600"/>
+
+            <Grid VerticalOptions="End" 
+         HorizontalOptions="FillAndExpand" 
+         Margin="0,0,0,60">
+
+                <Button x:Name="btn_Choose" 
+               WidthRequest="120" 
+               HeightRequest="40" 
+               HorizontalOptions="Start" 
+               VerticalOptions="End" 
+               Clicked="UploadImage_Clicked"
+               Margin="20,0,0,10">
+                    <Button.ImageSource>
+                        <FileImageSource File="ga.png"/>
+                    </Button.ImageSource>
+                    <Button.BackgroundColor>
+                        <Color>Transparent</Color>
+                    </Button.BackgroundColor>
+                    <Button.Padding>
+                        <Thickness>0</Thickness>
+                    </Button.Padding>
+                </Button>
+
+                <Button x:Name="Take_photo" 
+               WidthRequest="100" 
+               HeightRequest="100" 
+               HorizontalOptions="Center" 
+               VerticalOptions="End" 
+               Clicked="Take_photo_Clicked"
+               Margin="0,0,0,10">
+                    <Button.ImageSource>
+                        <FileImageSource File="camera.png"/>
+                    </Button.ImageSource>
+                    <Button.BackgroundColor>
+                        <Color>Transparent</Color>
+                    </Button.BackgroundColor>
+                    <Button.Padding>
+                        <Thickness>0</Thickness>
+                    </Button.Padding>
+                </Button>
+                <!--<Label x:Name="displayLabel_1"
+                       Text="Test"
+                       HorizontalOptions="End" 
+                       VerticalOptions="End" />-->
+            </Grid>
+
+            
+        </Grid>
+
+
+
+
+
+
+
+        
+
+        <!--<Label x:Name="displayLabelPath_3"
+Text="Place for path"
+HorizontalOptions="Center"
+VerticalOptions="CenterAndExpand" 
+        HeightRequest="300" WidthRequest="300"/>-->
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PriceGo2.Viws.RegisterPage"
+             Title="RegisterPage">
+    <VerticalStackLayout>
+        <Grid RowDefinitions="1*, 8*, 1*">
+            <Frame BackgroundColor="#848db5"
+        Margin="0, -80, -80, 0"
+        Grid.Row="0" HorizontalOptions="EndAndExpand"
+        Padding="0" 
+        HeightRequest="250" 
+        WidthRequest="250"
+        CornerRadius="125">
+            </Frame>
+            <Frame BackgroundColor="#131729"
+Margin="0, -120, -120, 0"
+Grid.Row="0" HorizontalOptions="EndAndExpand"
+Padding="0" 
+HeightRequest="250" 
+WidthRequest="250"
+CornerRadius="125">
+            </Frame>
+
+            <Frame BackgroundColor="{x:StaticResource DashboardBackground}" Grid.Row="1"
+        VerticalOptions="CenterAndExpand"
+        Margin="20, 0, 20, 0">
+
+                <VerticalStackLayout Spacing="25">
+                    <Label Text="REGISTER" FontSize="28" FontAttributes="Bold"/>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="20">
+                            <Image VerticalOptions="Center" Source="email.png" HeightRequest="25" WidthRequest="25"/>
+                            <Entry x:Name="emailEntry" VerticalOptions="Center" Placeholder="Email" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25, *" ColumnSpacing="20">
+                            <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25"/>
+                            <Entry x:Name="passwordEntry" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Button HeightRequest="60" Text="Register"  FontSize="20" FontAttributes="Bold" Clicked="Button_Clicked"/>
+                    <Button x:Name="btnCancel" Clicked="btnCancel_Clicked" Margin="0,30,0,0" WidthRequest="150" HeightRequest="40" Text="Cancel"  FontSize="15" FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Frame 
+     Grid.Row="2"
+     BackgroundColor="#848db5"
+ Margin="0, 0, 0, -180"
+     VerticalOptions="EndAndExpand" 
+ HorizontalOptions="StartAndExpand"
+ Padding="0" 
+ HeightRequest="250" 
+ WidthRequest="250"
+ CornerRadius="125">
+            </Frame>
+            <Frame 
+     Grid.Row="2"
+     BackgroundColor="#131729"
+     Margin="0, 0,0, -200"
+      VerticalOptions="EndAndExpand"
+     HorizontalOptions="StartAndExpand"
+     Padding="0" 
+     HeightRequest="250" 
+     WidthRequest="250"
+     CornerRadius="125">
+            </Frame>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
