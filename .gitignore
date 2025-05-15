@@ -499,3 +499,15 @@ PriceGo2/obj/Debug/net8.0-windows10.0.19041.0/
 # Ignore packaged resources
 PriceGo2/obj/Debug/net8.0-android/android/bin/packaged_resources
 PriceGo2/obj/Release/net8.0-android/android/bin/packaged_resources
+
+# Игнорировать bin и obj
+**/bin/
+**/obj/
+*.apk
+*.aab
+*.apks
+*.zip
+*.dll
+*.so
+*.dylib
+*.mlnet
