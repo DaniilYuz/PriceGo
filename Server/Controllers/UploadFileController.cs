@@ -31,7 +31,7 @@ namespace Server.Controllers
                 {
                     foreach (var file in httpContent.Form.Files)
                     {
-                        var filePath = Path.Combine(@"C:\PriceGo_server_published\PriceGo2\ML_Tech_ConsoleApp1\ImageData");
+                        var filePath = Path.Combine(@"C:\PriceGo_server_published\PriceGo2\ML_Tech_ConsoleApp1\ImageData\Source");
 
                         if (!Directory.Exists(filePath))
                             Directory.CreateDirectory(filePath);

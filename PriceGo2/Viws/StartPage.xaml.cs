@@ -1,3 +1,4 @@
+using Microsoft.Maui.Storage;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
@@ -39,10 +40,20 @@ namespace PriceGo2.Viws
             try
             {
                 HttpResponseMessage response = await _httpClient.PostAsync("http://192.168.137.1:88/api/Auth/login", content);
-                
+
                 if (response.IsSuccessStatusCode)
                 {
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    var userData = JsonConvert.DeserializeObject<UserModel>(responseBody);
+
+                    // Save user data in Preferences
+                    Preferences.Set("UserId", userData.UserId);
+                    Preferences.Set("Email", userData.Email);
+                    Preferences.Set("PhotoUrl", userData.PhotoUrl ?? "avatar_placeholder.png");
+
                     await DisplayAlert("Success", "Login successful!", "OK");
+
+                    // Navigate to main page
                     await Shell.Current.GoToAsync(nameof(mainPage));
                 }
                 else
@@ -61,5 +72,12 @@ namespace PriceGo2.Viws
         {
             await Shell.Current.GoToAsync(nameof(RegisterPage));
         }
+    }
+
+    public class UserModel
+    {
+        public int UserId { get; set; }
+        public string Email { get; set; }
+        public string PhotoUrl { get; set; }
     }
 }

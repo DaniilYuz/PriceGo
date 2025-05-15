@@ -63,18 +63,35 @@
                        Text="Test"
                        HorizontalOptions="End" 
                        VerticalOptions="End" />-->
+                <Button x:Name="MY_Account" 
+WidthRequest="60" 
+HeightRequest="60" 
+HorizontalOptions="End" 
+VerticalOptions="End" 
+Clicked="MY_Account_Clicked"
+Margin="0,0,50,0">
+                    <Button.ImageSource>
+                        <FileImageSource File="account.png"/>
+                    </Button.ImageSource>
+                    <Button.BackgroundColor>
+                        <Color>Transparent</Color>
+                    </Button.BackgroundColor>
+                    <Button.Padding>
+                        <Thickness>0</Thickness>
+                    </Button.Padding>
+                </Button>
             </Grid>
 
             
         </Grid>
 
-
-
-
-
-
-
         
+
+
+
+
+
+
 
         <!--<Label x:Name="displayLabelPath_3"
 Text="Place for path"

@@ -39,7 +39,7 @@ class Program
     static string FilePath;
     static async Task Main()
     {
-        string folderPath = @"C:\PriceGo_server_published\PriceGo2\ML_Tech_ConsoleApp1\ImageData";
+        string folderPath = @"C:\PriceGo_server_published\PriceGo2\ML_Tech_ConsoleApp1\ImageData\Source";
         using FileSystemWatcher watcher = new FileSystemWatcher(folderPath);
 
         watcher.Filter = "*.*"; 

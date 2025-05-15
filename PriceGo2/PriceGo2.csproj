@@ -87,6 +87,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Viws\ChangeAvatarPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Viws\mainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

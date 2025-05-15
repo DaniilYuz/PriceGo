@@ -7,6 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="PriceGo2">
 
+    
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:StartPage}"

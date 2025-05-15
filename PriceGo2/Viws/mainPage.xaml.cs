@@ -181,4 +181,9 @@ public partial class mainPage : ContentPage
             await DisplayAlert("Error", errorMessage, "OK");
         }
     }
+
+    private void MY_Account_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(ChangeAvatarPage));
+    }
 }

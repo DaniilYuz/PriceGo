@@ -11,6 +11,7 @@ namespace PriceGo2
             Routing.RegisterRoute(nameof(StartPage), typeof(StartPage));
             Routing.RegisterRoute(nameof(mainPage), typeof(mainPage));
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
+            Routing.RegisterRoute(nameof(ChangeAvatarPage), typeof(ChangeAvatarPage));
         }
     }
 }
