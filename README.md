@@ -1,8 +1,7 @@
 # PriceGO
 
 **Author:** Daniil Yuzepenko  
-**Email:** [georgiferstor@gmail.com](mailto:georgiferstor@gmail.com)  
-**Phone:** +48 790 803 659  
+**Email:** [georgiferstor@gmail.com](mailto:georgiferstor@gmail.com)
 
 ## Project Overview
 
